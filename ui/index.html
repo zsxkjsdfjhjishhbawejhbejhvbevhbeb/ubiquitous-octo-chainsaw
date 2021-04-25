@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Help Queue</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Register the script for index.html -->
+    <script src="index.js"></script>
+</head>
+<body>
+    <button onclick="get_all()">Refresh</button>
+    <table id="table" class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Description</th>
+                <th scope="col">Time Created</th>
+                <th scope="col">Status</th>
+                <th scope="col">Urgency</th>
+                <th scope="col">Solution</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <button onclick="create()">Add</button>
+    <form onclick="get_all()">
+        <input type="radio" name="order" value=">" checked="checked"> Ascending
+        <input type="radio" name="order" value="<"> Descending
+    </form>
+    <form onclick="get_all()">
+        <input type="radio" name="key" value="timeCreated" checked="checked"> Time Created
+        <input type="radio" name="key" value="title"> Title
+        <input type="radio" name="key" value="author"> Author
+    </form>
+</body>
+</html>
